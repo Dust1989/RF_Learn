@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1 (Python 3.7.1 on win32)" generated="20190220 23:22:48.319" rpa="false">
-<suite id="s1" name="Project" source="E:\Python_Project\PycharmProjects\rf_learn02\tests\project.robot">
+<robot generator="Robot 3.1.1 (Python 3.6.7 on linux)" generated="20190306 19:32:55.859" rpa="false">
+<suite id="s1" name="Project" source="/home/dust/PycharmProjects/RF_Learn/Tests/Project.robot">
 <kw name="Log" library="BuiltIn" type="setup">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>I am inside Test Suite Setup</arg>
 </arguments>
-<msg timestamp="20190220 23:22:48.520" level="INFO">I am inside Test Suite Setup</msg>
-<status status="PASS" starttime="20190220 23:22:48.520" endtime="20190220 23:22:48.520"></status>
+<msg timestamp="20190306 19:32:55.973" level="INFO">I am inside Test Suite Setup</msg>
+<status status="PASS" starttime="20190306 19:32:55.972" endtime="20190306 19:32:55.973"></status>
 </kw>
 <test id="s1-t1" name="My First RF Test Case">
 <kw name="Log" library="BuiltIn" type="setup">
@@ -15,61 +15,154 @@
 <arguments>
 <arg>I am inside Test Case Setup</arg>
 </arguments>
-<msg timestamp="20190220 23:22:48.521" level="INFO">I am inside Test Case Setup</msg>
-<status status="PASS" starttime="20190220 23:22:48.521" endtime="20190220 23:22:48.521"></status>
+<msg timestamp="20190306 19:32:55.974" level="INFO">I am inside Test Case Setup</msg>
+<status status="PASS" starttime="20190306 19:32:55.974" endtime="20190306 19:32:55.974"></status>
 </kw>
 <kw name="Set Tags" library="BuiltIn">
 <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
 <arguments>
 <arg>Regression</arg>
 </arguments>
-<msg timestamp="20190220 23:22:48.521" level="INFO">Set tag 'Regression'.</msg>
-<status status="PASS" starttime="20190220 23:22:48.521" endtime="20190220 23:22:48.522"></status>
+<msg timestamp="20190306 19:32:55.975" level="INFO">Set tag 'Regression'.</msg>
+<status status="PASS" starttime="20190306 19:32:55.975" endtime="20190306 19:32:55.975"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Hello RobotFramework</arg>
 </arguments>
-<msg timestamp="20190220 23:22:48.522" level="INFO">Hello RobotFramework</msg>
-<status status="PASS" starttime="20190220 23:22:48.522" endtime="20190220 23:22:48.522"></status>
+<msg timestamp="20190306 19:32:55.976" level="INFO">Hello RobotFramework</msg>
+<status status="PASS" starttime="20190306 19:32:55.975" endtime="20190306 19:32:55.976"></status>
 </kw>
 <kw name="Log" library="BuiltIn" type="teardown">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>I am inside Test Case Teardown</arg>
 </arguments>
-<msg timestamp="20190220 23:22:48.523" level="INFO">I am inside Test Case Teardown</msg>
-<status status="PASS" starttime="20190220 23:22:48.523" endtime="20190220 23:22:48.523"></status>
+<msg timestamp="20190306 19:32:55.976" level="INFO">I am inside Test Case Teardown</msg>
+<status status="PASS" starttime="20190306 19:32:55.976" endtime="20190306 19:32:55.976"></status>
 </kw>
 <tags>
 <tag>Regression</tag>
 <tag>Sanity</tag>
 </tags>
-<status status="PASS" starttime="20190220 23:22:48.520" endtime="20190220 23:22:48.523" critical="yes"></status>
+<status status="PASS" starttime="20190306 19:32:55.973" endtime="20190306 19:32:55.976" critical="yes"></status>
+</test>
+<test id="s1-t2" name="User can open home page">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am inside Test Case Setup</arg>
+</arguments>
+<msg timestamp="20190306 19:32:55.978" level="INFO">I am inside Test Case Setup</msg>
+<status status="PASS" starttime="20190306 19:32:55.978" endtime="20190306 19:32:55.978"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190306 19:32:55.978" level="INFO">Opening browser 'chrome' to base url 'http://118.31.187.124:81'.</msg>
+<status status="PASS" starttime="20190306 19:32:55.978" endtime="20190306 19:32:57.806"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20190306 19:32:57.807" endtime="20190306 19:32:57.809"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=zentao</arg>
+</arguments>
+<msg timestamp="20190306 19:32:57.809" level="INFO">Clicking element 'id=zentao'.</msg>
+<status status="PASS" starttime="20190306 19:32:57.809" endtime="20190306 19:32:59.116"></status>
+</kw>
+<kw name="Login Page">
+<arguments>
+<arg>@{CREDENTIALS}[0]</arg>
+<arg>&amp;{LoginDate}[password]</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=account</arg>
+<arg>${account}</arg>
+</arguments>
+<msg timestamp="20190306 19:32:59.118" level="INFO">Typing text 'test01' into text field 'name=account'.</msg>
+<status status="PASS" starttime="20190306 19:32:59.117" endtime="20190306 19:32:59.268"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190306 19:32:59.268" level="INFO">Typing text 'test01#' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190306 19:32:59.268" endtime="20190306 19:32:59.403"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=submit</arg>
+</arguments>
+<msg timestamp="20190306 19:32:59.404" level="INFO">Clicking element 'id=submit'.</msg>
+<status status="PASS" starttime="20190306 19:32:59.403" endtime="20190306 19:33:01.093"></status>
+</kw>
+<status status="PASS" starttime="20190306 19:32:59.116" endtime="20190306 19:33:01.093"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190306 19:33:03.098" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190306 19:33:01.094" endtime="20190306 19:33:03.098"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190306 19:33:03.098" endtime="20190306 19:33:03.155"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am inside Test Case Teardown</arg>
+</arguments>
+<msg timestamp="20190306 19:33:03.156" level="INFO">I am inside Test Case Teardown</msg>
+<status status="PASS" starttime="20190306 19:33:03.156" endtime="20190306 19:33:03.156"></status>
+</kw>
+<doc>As a user I can open the home page and see the tagline</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20190306 19:32:55.977" endtime="20190306 19:33:03.156" critical="yes"></status>
 </test>
 <kw name="Log" library="BuiltIn" type="teardown">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>I am inside Test Suite Teardown</arg>
 </arguments>
-<msg timestamp="20190220 23:22:48.524" level="INFO">I am inside Test Suite Teardown</msg>
-<status status="PASS" starttime="20190220 23:22:48.524" endtime="20190220 23:22:48.524"></status>
+<msg timestamp="20190306 19:33:03.157" level="INFO">I am inside Test Suite Teardown</msg>
+<status status="PASS" starttime="20190306 19:33:03.157" endtime="20190306 19:33:03.157"></status>
 </kw>
 <doc>Suite description</doc>
-<status status="PASS" starttime="20190220 23:22:48.321" endtime="20190220 23:22:48.524"></status>
+<status status="PASS" starttime="20190306 19:32:55.860" endtime="20190306 19:33:03.157"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0">Regression</stat>
 <stat pass="1" fail="0">Sanity</stat>
+<stat pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Project">Project</stat>
+<stat pass="2" fail="0" id="s1" name="Project">Project</stat>
 </suite>
 </statistics>
 <errors>

@@ -8,6 +8,7 @@ Test Teardown       Log     I am inside Test Case Teardown
 
 Default Tags        Sanity
 
+
 *** Variables ***
 # Scalar变量
 ${URL}          http://118.31.187.124:81
@@ -31,7 +32,7 @@ User can open home page
     login page                  @{CREDENTIALS}[0]       &{LoginDate}[password]
     Sleep                       2
     Close Browser
-    Log                         This test was excuted by %{username} on %{os}
+    # Log                         This test was excuted by %{username} on %{os}
 
 *** Keywords ***
 # Keywords 编写实例
